@@ -12,6 +12,13 @@
   src: url(../font/Papernotes.ttf);
 }
 
+body {
+  background-color: #4a536b;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 section.landing {
   height: 100vh;
   width: 100vw;
@@ -26,8 +33,6 @@ section.landing::before {
   z-index: -1;
   border-radius: 0% 0% 20% 20%;
 }
-
-
 
 h1 {
   color: #4a536b;
@@ -95,6 +100,7 @@ a.inner-button {
   margin: 0 auto; /* Centre la galerie horizontalement */
   padding: 20px; /* Ajoute un peu de padding autour de la galerie */
   padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .gallery-item {
@@ -127,22 +133,32 @@ a.inner-button {
   transform: scale(1.1);
 }
 
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #aed6dc;
+  text-shadow: 3px 3px #4a536b;
+  font-size: 140px;
+  font-family: PhotoSignature;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-out; 
+  pointer-events: none; 
+}
+
+.gallery-item:hover .hover-text {
+  opacity: 1;
+}
+
+
 .img-gallery{
   transition: 0.4s ease-out;
 }
 
 .img-gallery:hover {
   filter: brightness(50%) blur(3px);
-}
-
-.shadow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  box-shadow: inset 3px 3px 10px 0 #000000;
-  border-radius: 20px;
-  top: 0;
-  left: 0;
 }
 
 .gallery-title{
@@ -152,15 +168,26 @@ a.inner-button {
   padding-top: 12px;
   text-decoration: none;
   font-family: PaperNotes;
-  color: #4a536b;
+  color: #aed6dc;
+  text-shadow: 2px 3px 2px #4a536b;
 }
 
-body {
-  background-color: #4a536b;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
+section.footer {
+  width: 100vw;
+  height: 50px;
 }
+
+section.footer::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100px;
+  background-color: white;
+  z-index: -1;
+  border-radius: 30% 30% 0% 0%;
+}
+
+
 /* 
 #aed6dc
 #ff9a8d
