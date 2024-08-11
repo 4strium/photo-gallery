@@ -31,7 +31,7 @@ section.landing::before {
 
 h1 {
   color: #4a536b;
-  margin-left: 20%;
+  margin-left: 18%;
   margin-top: 0%;
   padding-top: 15%;
   font-size: 100px;
@@ -40,7 +40,7 @@ h1 {
 
 h2 {
   color: #aed6dc;
-  margin-left: 21%;
+  margin-left: 19%;
   margin-top: -4%;
   font-size: 50px;
   margin-bottom: 0px;
@@ -50,7 +50,7 @@ h2 {
 .case-button {
   max-width: fit-content;
   max-height: fit-content;
-  margin-left: 20%;
+  margin-left: 18%;
   border: 5px solid #4a536b;           /* Add a solid border */
   padding: 0px;                    /* Add space inside the border */
   border-radius: 12px;               /* Round the corners */                /* Set the font size */
@@ -82,6 +82,77 @@ a.inner-button {
   width: 100%;
   padding: 20px;
   line-height: 1;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 50px;
+  width: 150%;
+  max-width: 1600px;
+  box-sizing: border-box;
+  margin: 0 auto; /* Centre la galerie horizontalement */
+  padding: 20px; /* Ajoute un peu de padding autour de la galerie */
+  padding-top: 80px;
+}
+
+.gallery-item {
+  display: block;
+  background-color: #ff9a8d;
+  overflow: hidden;
+  transition: 0.3s ease-out;
+  padding: 30px;
+  padding-bottom: 70px;
+  border-radius: 5%;
+  position: relative; /* Nécessaire pour le contenu absolu si besoin */ 
+  text-decoration: none;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border: none;
+    margin: 0 auto;
+    object-fit: cover;
+    border: none; /* Enlève les bordures supplémentaires sur l'image */
+    border-radius: 5%;
+    transition: 0.3s ease-out;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+.img-gallery{
+  transition: 0.4s ease-out;
+}
+
+.img-gallery:hover {
+  filter: brightness(50%) blur(3px);
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 3px 3px 10px 0 #000000;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+}
+
+.gallery-title{
+  text-align: center;
+  font-size: 50px;
+  margin: 0;
+  padding-top: 12px;
+  text-decoration: none;
+  font-family: PaperNotes;
+  color: #4a536b;
 }
 
 body {
