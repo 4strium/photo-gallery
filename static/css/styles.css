@@ -12,10 +12,28 @@
   src: url(../font/Papernotes.ttf);
 }
 
+section.landing {
+  height: 100vh;
+  width: 100vw;
+}
+
+section.landing::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: -1;
+  border-radius: 0% 0% 20% 20%;
+}
+
+
+
 h1 {
   color: #4a536b;
   margin-left: 20%;
-  margin-top: 12%;
+  margin-top: 0%;
+  padding-top: 15%;
   font-size: 100px;
   font-family: PaperNotesBold;
 }
@@ -29,17 +47,12 @@ h2 {
   font-family: PhotoSignature;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
 .case-button {
   max-width: fit-content;
   max-height: fit-content;
   margin-left: 20%;
   border: 5px solid #4a536b;           /* Add a solid border */
-  padding: 20px;                    /* Add space inside the border */
+  padding: 0px;                    /* Add space inside the border */
   border-radius: 12px;               /* Round the corners */                /* Set the font size */
   color: white;
   font-family : PaperNotes;
@@ -47,10 +60,35 @@ a {
   text-align: center;
   font-size: 45px;
   background-color: #aed6dc;
+  transition: 0.4s ease; /* Transition pour un effet doux */
+  position: relative; /* Nécessaire pour le positionnement absolu du pseudo-élément */
+  overflow: hidden; /* Cache tout ce qui dépasse l'élément */
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.case-button:hover {
+  background-color: #ff9a8d;
+  border: 5px solid #ff9a8d;
+  transform: scale(1.08);
+}
+
+a.inner-button {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  line-height: 1;
 }
 
 body {
-  background-color: white;
+  background-color: #4a536b;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 /* 
 #aed6dc
