@@ -7,6 +7,7 @@
   font-family: PaperNotesBold;
   src: url(../font/Papernotes\ Bold.ttf);
 }
+
 @font-face {
   font-family: PaperNotes;
   src: url(../font/Papernotes.ttf);
@@ -22,6 +23,11 @@ body {
 section.landing {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px; /* Espace entre les colonnes */
 }
 
 section.landing::before {
@@ -34,43 +40,62 @@ section.landing::before {
   border-radius: 0% 0% 20% 20%;
 }
 
+.land-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 5%;
+  /* Ajuster la marge pour positionner correctement le contenu */
+}
+
 h1 {
   color: #4a536b;
   margin-left: 18%;
   margin-top: 0%;
-  padding-top: 15%;
+  margin-bottom: 0;
+
+  padding-bottom: 1vh;
   font-size: 100px;
   font-family: PaperNotesBold;
 }
 
 h2 {
   color: #aed6dc;
-  margin-left: 19%;
-  margin-top: -4%;
+  margin-left: 18.5%;
+  margin-top: 0;
   font-size: 50px;
   margin-bottom: 0px;
+  padding-bottom: 1vh;
   font-family: PhotoSignature;
 }
+
 
 .case-button {
   max-width: fit-content;
   max-height: fit-content;
   margin-left: 18%;
-  border: 5px solid #4a536b;           /* Add a solid border */
-  padding: 0px;                    /* Add space inside the border */
-  border-radius: 12px;               /* Round the corners */                /* Set the font size */
+  border: 5px solid #4a536b;
+  /* Add a solid border */
+  padding: 0px;
+  /* Add space inside the border */
+  border-radius: 12px;
+  /* Round the corners */
+  /* Set the font size */
   color: white;
-  font-family : PaperNotes;
+  font-family: PaperNotes;
   text-decoration: none;
   text-align: center;
   font-size: 45px;
   background-color: #aed6dc;
-  transition: 0.4s ease; /* Transition pour un effet doux */
-  position: relative; /* Nécessaire pour le positionnement absolu du pseudo-élément */
-  overflow: hidden; /* Cache tout ce qui dépasse l'élément */
+  transition: 0.4s ease;
+  /* Transition pour un effet doux */
+  position: relative;
+  /* Nécessaire pour le positionnement absolu du pseudo-élément */
+  overflow: hidden;
+  /* Cache tout ce qui dépasse l'élément */
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .case-button:hover {
@@ -89,6 +114,29 @@ a.inner-button {
   line-height: 1;
 }
 
+.swiper {
+  width: 1000px;
+  height: 670px;
+  padding: 50px 0;
+}
+
+.swiper-slide {
+  position: relative;
+  width: 820px;
+  border-radius: 5%;
+  aspect-ratio: 16/9;
+  border: 10px solid #ff9a8d;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  user-select: none;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -97,8 +145,10 @@ a.inner-button {
   width: 150%;
   max-width: 1600px;
   box-sizing: border-box;
-  margin: 0 auto; /* Centre la galerie horizontalement */
-  padding: 20px; /* Ajoute un peu de padding autour de la galerie */
+  margin: 0 auto;
+  /* Centre la galerie horizontalement */
+  padding: 20px;
+  /* Ajoute un peu de padding autour de la galerie */
   padding-top: 80px;
   padding-bottom: 80px;
 }
@@ -109,23 +159,25 @@ a.inner-button {
   overflow: hidden;
   transition: 0.3s ease-out;
   padding: 30px;
-  padding-bottom: 70px;
+  padding-bottom: 20px;
   border-radius: 5%;
-  position: relative; /* Nécessaire pour le contenu absolu si besoin */ 
+  position: relative;
+  /* Nécessaire pour le contenu absolu si besoin */
   text-decoration: none;
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    border: none;
-    margin: 0 auto;
-    object-fit: cover;
-    border: none; /* Enlève les bordures supplémentaires sur l'image */
-    border-radius: 5%;
-    transition: 0.3s ease-out;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border: none;
+  margin: 0 auto;
+  object-fit: cover;
+  border: none;
+  /* Enlève les bordures supplémentaires sur l'image */
+  border-radius: 5%;
+  transition: 0.3s ease-out;
 }
 
 .gallery-item:hover {
@@ -144,16 +196,17 @@ a.inner-button {
   font-family: PhotoSignature;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.4s ease-out; 
-  pointer-events: none; 
+  transition: opacity 0.4s ease-out;
+  pointer-events: none;
 }
 
-.gallery-item:hover .hover-text {
+
+.img-hover:hover .hover-text {
   opacity: 1;
 }
 
 
-.img-gallery{
+.img-gallery {
   transition: 0.4s ease-out;
 }
 
@@ -161,11 +214,12 @@ a.inner-button {
   filter: brightness(50%) blur(3px);
 }
 
-.gallery-title{
+
+.gallery-title {
   text-align: center;
   font-size: 50px;
   margin: 0;
-  padding-top: 12px;
+  padding-top: 20px;
   text-decoration: none;
   font-family: PaperNotes;
   color: #aed6dc;
@@ -187,6 +241,42 @@ section.footer::before {
   border-radius: 30% 30% 0% 0%;
 }
 
+.footer-text {
+  padding-top: 2.5vh;
+  display: flex;
+  align-items: center;
+  /* Aligne verticalement au centre */
+  justify-content: center;
+  /* Centre les éléments horizontalement */
+  gap: 10px;
+  /* Espace entre les éléments */
+  color: #4a536b;
+}
+
+.footer-text h5,
+.footer-text img {
+  margin: 0;
+  /* Retire les marges par défaut */
+}
+
+.footer-text h5 {
+  font-family: PaperNotes;
+  font-size: 28px;
+  text-align: center;
+}
+
+.link {
+  text-decoration: underline;
+  color: #4a536b;
+}
+
+.title-collections {
+  font-size: 140px;
+  text-align: center;
+  padding-top: 5vh;
+  margin-left: 0;
+  text-shadow: 5px 5px #ff9a8d;
+}
 
 /* 
 #aed6dc
