@@ -460,7 +460,7 @@ a.see-gallery {
 
   .gallery-collection {
     grid-template-columns: repeat(2, 1fr);
-    width: 90%;
+    width: 110%;
   }
 }
 
@@ -468,7 +468,7 @@ a.see-gallery {
 
   .gallery-collection {
     grid-template-columns: repeat(1, 1fr);
-    width: 90%;
+    width: 110%;
   }
 }
 
