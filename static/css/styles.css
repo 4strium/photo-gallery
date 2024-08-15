@@ -23,11 +23,30 @@ body {
 section.landing {
   height: 100vh;
   width: 100vw;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.title-and-swiper {
+  height: 80vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   gap: 20px; /* Espace entre les colonnes */
+}
+
+.logo-links{
+  display: flex;
+  gap: 25px;
+  padding-right: 2%;
+  padding-top: 1%;
+  text-decoration: none;
+  justify-content: flex-end;
 }
 
 section.landing::before {
@@ -44,7 +63,8 @@ section.landing::before {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 5%;
+  margin-right: 3%;
+  margin-left: 10%;
   /* Ajuster la marge pour positionner correctement le contenu */
 }
 
@@ -115,17 +135,17 @@ a.inner-button {
 }
 
 .swiper {
-  width: 1000px;
-  height: 670px;
-  padding: 50px 0;
+  height: 50vh;
+  width: 54vw;
+  padding: 40px 0;
+  overflow: hidden;
+  margin-right: 2%;
 }
 
 .swiper-slide {
   position: relative;
-  width: 820px;
   border-radius: 5%;
   aspect-ratio: 16/9;
-  border: 10px solid #ff9a8d;
 }
 
 .swiper-slide img {
@@ -135,6 +155,7 @@ a.inner-button {
   object-fit: cover;
   border-radius: inherit;
   user-select: none;
+  border: 8px solid #ff9a8d;
 }
 
 .gallery {

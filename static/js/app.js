@@ -2,23 +2,20 @@ var swiper = new Swiper(".swiper", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  InitialSlide: 2,
+  initialSlide: 1,
   speed : 600,
   preventClicks: true,
-  slidesPerView: "auto",
+  slidesPerView: 1.5,
+  loop: true,
+  spaceBetween: 0,
   coverflowEffect: {
     rotate: 0,
     stretch: 80,
-    depth: 350,
+    depth: 500,
     modifier: 1,
-    slideShadows: true
+    slideShadows: true,
   },
   autoplay: {
     delay: 3000,
-  },
-  on: {
-    click(event){
-      swiper.slideTo(this.clickedIndex);
-    },
-  },
+  }
 });
