@@ -329,7 +329,7 @@ section.footer::before {
 .home-button {
   position: absolute;
   top: 8%;
-  left: 3%;
+  left: 8%;
   transform: translate(-50%, -50%);
   z-index: 10;
   filter: drop-shadow(4px 4px 2px #4a536b);
@@ -340,6 +340,7 @@ section.footer::before {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
   gap: 50px;
+  align-items: center;
   width: 150%;
   max-width: 1600px;
   box-sizing: border-box;
@@ -398,6 +399,16 @@ section.footer::before {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+a.see-gallery {
+  display: block;
+  text-align: center;
+  margin-bottom: 80px;
+  font-size: 80px;
+  font-family: PaperNotesBold;
+  text-decoration: underline;
+  color: #aed6dc;
 }
 
 /* 
