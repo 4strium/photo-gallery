@@ -480,6 +480,10 @@ a.see-gallery {
   .close {
     font-size: 100px;
   }
+
+  .image-thumbnail{
+    width: 85vw;
+  }
 }
 
 
