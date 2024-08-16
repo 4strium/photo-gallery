@@ -460,7 +460,11 @@ a.see-gallery {
 
   .gallery-collection {
     grid-template-columns: repeat(2, 1fr);
-    width: 110%;
+    width: 90%;
+  }
+
+  .close {
+    font-size: 70px;
   }
 }
 
@@ -468,7 +472,13 @@ a.see-gallery {
 
   .gallery-collection {
     grid-template-columns: repeat(1, 1fr);
-    width: 110%;
+    width: 90%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .close {
+    font-size: 100px;
   }
 }
 
