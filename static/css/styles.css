@@ -238,6 +238,7 @@ a.inner-button {
   }
 
   .land-content {
+    margin-top: -20px;
     margin: 0;
     text-align: center;
   }
