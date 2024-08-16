@@ -37,10 +37,11 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 20px; /* Espace entre les colonnes */
+  gap: 20px;
+  /* Espace entre les colonnes */
 }
 
-.logo-links{
+.logo-links {
   display: flex;
   gap: 25px;
   padding-right: 2%;
@@ -134,66 +135,96 @@ a.inner-button {
   line-height: 1;
 }
 
-@media only screen and (min-width: 1600px){
-  .swiper {
-    height: 50vh;
-    width: 54vw;
-    padding: 40px 0;
-    overflow: hidden;
-    margin-right: 2%;
-  }
-
-  .swiper-slide {
-    position: relative;
-    border-radius: 5%;
-    aspect-ratio: 16/9;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-    user-select: none;
-    border: 8px solid #ff9a8d;  
-  }
+.swiper {
+  height: 50vh;
+  width: 54vw;
+  padding: 40px 0;
+  overflow: hidden;
+  margin-right: 2%;
 }
 
-@media screen and (max-width: 1599px){
+.swiper-slide {
+  position: relative;
+  border-radius: 5%;
+  aspect-ratio: 16/9;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  user-select: none;
+  border: 8px solid #ff9a8d;
+}
+
+.swiper-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1599px) {
 
   .case-button {
-  margin-left: 25%;
+    margin-left: 25%;
+  }
+
+  .swiper-big {
+    display: none;
+  }
+
+  .swiper-mobile {
+    display: block;
   }
 
   .swiper {
-    display: none;
+    height: 40vh;
+    width: 100vw;
+    margin-right: 0;
+    padding-bottom: 0;
   }
 
   .swiper-slide {
-    display: none;
+    height: 80%;
   }
 
-  .swiper-slide img {
-    display: none;
+  .title-and-swiper {
+    height: 40vh;
+  }
+
+  .land-content {
+    margin: 0;
+    text-align: center;
+  }
+
+  .land-content h1 {
+    margin: 0;
+  }
+
+  .land-content h2 {
+    margin: 0;
+  }
+
+  .case-button {
+    margin: 0 auto; 
   }
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 50px;
-    width: 90%;
-    max-width: 1600px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    /* Centre la galerie horizontalement */
-    padding: 20px;
-    /* Ajoute un peu de padding autour de la galerie */
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 50px;
+  width: 90%;
+  max-width: 1600px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  /* Centre la galerie horizontalement */
+  padding: 20px;
+  /* Ajoute un peu de padding autour de la galerie */
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 
 @media screen and (min-width: 1600px) {
   .gallery {
@@ -394,52 +425,53 @@ section.footer::before {
 }
 
 .image-thumbnail {
-    width: 500px;
-    cursor: pointer;
+  width: 500px;
+  cursor: pointer;
 }
 
 /* Le conteneur de la modale est caché par défaut */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px); /* Floute l'arrière-plan */
-    align-items: center;
-    justify-content: center;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  /* Floute l'arrière-plan */
+  align-items: center;
+  justify-content: center;
 }
 
 /* Style pour l'image dans la modale */
 .modal-content {
-    max-width: 90%;
-    max-height: 90%;
-    margin: auto;
-    display: block;
-    border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 /* Style pour la croix de fermeture */
 .close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 a.see-gallery {
@@ -452,7 +484,7 @@ a.see-gallery {
   color: #aed6dc;
 }
 
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 1600px) {
   .hover-text {
     top: 40%;
     font-size: 100px;
@@ -468,7 +500,7 @@ a.see-gallery {
   }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
 
   .gallery-collection {
     grid-template-columns: repeat(1, 1fr);
@@ -481,7 +513,7 @@ a.see-gallery {
     font-size: 100px;
   }
 
-  .image-thumbnail{
+  .image-thumbnail {
     width: 85vw;
   }
 }
