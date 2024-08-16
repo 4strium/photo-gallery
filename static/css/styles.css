@@ -163,6 +163,50 @@ a.inner-button {
   display: none;
 }
 
+.arrow1,
+.arrow2,
+.arrow3 {
+  margin-top: -70px;
+  opacity: 0;
+  animation: arrow-anim 2.2s ease-in-out infinite; /* Applique une animation infinie */
+}
+
+.arrow1 {
+  animation-delay: 0s; /* La première flèche démarre immédiatement */
+}
+
+.arrow2 {
+  animation-delay: 0.3s; /* La seconde flèche démarre après 0.5s */
+}
+
+.arrow3 {
+  animation-delay: 0.6s; /* La troisième flèche démarre après 1s */
+}
+
+@keyframes arrow-anim {
+  0% {
+    opacity: 0; /* La flèche est invisible au début */
+  }
+  20% {
+    opacity: 1; /* La flèche devient visible */
+  }
+  40% {
+    opacity: 0; /* La flèche commence à disparaître */
+  }
+  100% {
+    opacity: 0; /* La flèche reste invisible jusqu'à la fin de l'animation */
+  }
+}
+
+.scroll-anim {
+  display: flex;
+  flex-direction: column;
+  height: 128px;
+  width: 128px;
+  margin: 0 auto;
+  margin-top: -45px;
+}
+
 @media screen and (max-width: 1599px) {
 
   .case-button {
@@ -187,10 +231,6 @@ a.inner-button {
 
   .swiper-slide {
     height: 80%;
-  }
-
-  .swiper-slide img {
-    width: 110%;
   }
 
   .title-and-swiper {
