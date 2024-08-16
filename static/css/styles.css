@@ -175,6 +175,7 @@ a.inner-button {
 
   .swiper-mobile {
     display: block;
+    margin-top: 5vh;
   }
 
   .swiper {
@@ -188,6 +189,10 @@ a.inner-button {
     height: 80%;
   }
 
+  .swiper-slide img {
+    width: 110%;
+  }
+
   .title-and-swiper {
     height: 40vh;
   }
@@ -198,15 +203,18 @@ a.inner-button {
   }
 
   .land-content h1 {
+    font-size: 140px;
     margin: 0;
   }
 
   .land-content h2 {
+    font-size: 80px;
     margin: 0;
   }
 
   .case-button {
     margin: 0 auto; 
+    font-size: 60px;
   }
 }
 
