@@ -238,6 +238,7 @@ a.inner-button {
     width: 100vw;
     margin-right: 0;
     padding-bottom: 0;
+    padding-top: 5px;
   }
 
   .swiper-slide {
@@ -268,6 +269,50 @@ a.inner-button {
     margin: 0 auto;
     font-size: 60px;
   }
+}
+
+@media screen and (max-height: 500px) {
+  .land-content h1 {
+    font-size: 100px;
+    margin-top: 70vh;
+  }
+
+  .land-content h1 {
+    padding: 0;
+  }
+
+  section.landing::before {
+    height: 270vh;
+  }
+
+  .swiper-mobile {
+    display: block;
+    margin-top: 0;
+  }
+
+  .swiper {
+    height: 85vh;
+    width: 100vw;
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+
+  .swiper-slide {
+    height: 80%;
+  }
+
+  .case-button {
+    font-size: 40px;
+  }
+
+  .scroll-anim {
+    margin-top: 76vh;
+  }
+
+  section.landing {
+    height: 270vh;
+  }
+
 }
 
 .gallery {
@@ -359,7 +404,8 @@ a.inner-button {
 
 
 .img-gallery {
-  height: 400px !important; /* Hauteur fixe */ 
+  height: 400px !important;
+  /* Hauteur fixe */
   transition: 0.4s ease-out;
   cursor: pointer;
 }
