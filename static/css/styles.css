@@ -478,7 +478,7 @@ a.see-gallery {
   color: #aed6dc;
 }
 
-@media screen and (max-width: 1599px) {
+@media screen and (max-width: 1521px)  {
 
   .case-button {
     margin-left: 25%;
@@ -560,6 +560,35 @@ a.see-gallery {
     /* Ajoute un peu de padding autour de la galerie */
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+}
+
+/* Ajustements spécifiques pour les utilisateurs Windows avec un zoom supérieur à 125% */
+@media screen and (min-width: 1522px) and (max-width: 1599px){
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 50px;
+    width: 94%;
+    max-width: 1600px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .gallery-collection {
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin: 0 auto;
+    column-gap: 0px;
+  }
+
+  .image-thumbnail {
+    width: 28vw;
   }
 }
 
